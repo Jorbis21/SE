@@ -1,3 +1,0 @@
-xst -intstyle ise -ifn "C:/Users/marti/OneDrive/Documentos/4/proyectFinal/SE/pcores/motor_v1_00_a/devl/projnav/motor.xst" -ofn "C:/Users/marti/OneDrive/Documentos/4/proyectFinal/SE/pcores/motor_v1_00_a/devl/projnav/motor.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1000-ft256-5 motor.ngc motor.ngd  
-map -intstyle ise -p xc3s1000-ft256-5 -cm area -ir off -pr off -c 100 -o motor_map.ncd motor.ngd motor.pcf 

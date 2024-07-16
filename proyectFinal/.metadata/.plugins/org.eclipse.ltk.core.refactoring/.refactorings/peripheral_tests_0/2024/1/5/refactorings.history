@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;peripheral_tests_0/src/NUMEROS.h&apos; to &apos;bannerMsg.h&apos;" description="Rename resource &apos;NUMEROS.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/NUMEROS.h" name="bannerMsg.h" stamp="1706615885970" updateReferences="true"/>
-</session>

@@ -1,9 +1,0 @@
-V3 3
-FL C:/Users/marti/OneDrive/Documentos/4/proyectFinal/SE/pcores/banner_v1_00_a/hdl/vhdl/bannerDesp.vhd 2023/12/12.12:18:44 P.15xf
-EN work/bannerDesp 1702552268 \
-      FL C:/Users/marti/OneDrive/Documentos/4/proyectFinal/SE/pcores/banner_v1_00_a/hdl/vhdl/bannerDesp.vhd \
-      PB ieee/std_logic_1164 1335251622 PB ieee/std_logic_arith 1335251623 \
-      PB ieee/STD_LOGIC_UNSIGNED 1335251625
-AR work/bannerDesp/banner_arch 1702552269 \
-      FL C:/Users/marti/OneDrive/Documentos/4/proyectFinal/SE/pcores/banner_v1_00_a/hdl/vhdl/bannerDesp.vhd \
-      EN work/bannerDesp 1702552268

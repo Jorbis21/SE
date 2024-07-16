@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<section name="Workbench">
-	<item value="C:\Users\marti\OneDrive\Documentos\4\proyectFinal\SE_hw_platform\system.bit" key="SE_hw_platform-bitFile"/>
-	<item value="C:\Users\marti\OneDrive\Documentos\4\proyectFinal\SE_hw_platform\system_bd.bmm" key="SE_hw_platform-bmmFile"/>
-	<item value="C:\Users\marti\OneDrive\Documentos\4\proyectFinal\peripheral_tests_0\Debug\peripheral_tests_0.elf" key="SE_hw_platform-microblaze_0-initElf"/>
-</section>
