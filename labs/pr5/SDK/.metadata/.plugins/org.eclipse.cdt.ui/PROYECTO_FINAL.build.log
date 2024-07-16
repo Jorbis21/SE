@@ -1,0 +1,33 @@
+
+**** Build of configuration Debug for project proyecto_final ****
+
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../peripheral_tests_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.30.a -mno-xl-soft-mul -MMD -MP -MF"src/main.d" -MT"src/main.d" -o"src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+' '
+Building target: proyecto_final.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,--no-relax -Wl,-T -Wl,../src/lscript.ld -L../../peripheral_tests_bsp_0/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.30.a -mno-xl-soft-mul -o"proyecto_final.elf"  ./src/keypad.o ./src/keypad_selftest.o ./src/lcd.o ./src/lcd_selftest.o ./src/leds.o ./src/leds_selftest.o ./src/main.o ./src/xbram_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: proyecto_final.elf
+' '
+Invoking: MicroBlaze Print Size
+mb-size proyecto_final.elf  |tee "proyecto_final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13990	    368	   2176	  16534	   4096	proyecto_final.elf
+Finished building: proyecto_final.elf.size
+' '
+Invoking: Xilinx ELF Check
+elfcheck proyecto_final.elf -hw ../../proyecto_hw_platform/system.xml -pe microblaze_0  |tee "proyecto_final.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.1 Build EDK_P.15xf
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proyecto_hw_platform/system.xml -pe
+microblaze_0 proyecto_final.elf 
+
+ELF file	: proyecto_final.elf
+elfcheck passed.
+Finished building: proyecto_final.elf.elfcheck
+' '

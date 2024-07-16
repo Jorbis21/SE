@@ -1,0 +1,10 @@
+-batch 
+-create motor 
+-ver 1.00.a 
+-dir "U:\hlocal\Pablo\SE\proyecto" 
+-lang vhdl 
+-bus plbv46 s 
+-reg 1 
+-xps 
+-ise 
+-driver 

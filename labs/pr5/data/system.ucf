@@ -1,0 +1,58 @@
+###CLK
+NET Clk_pin LOC=P8;
+NET "Clk_pin" FLOAT;
+
+###RESET
+NET Rst_pin LOC=K4;
+NET "Rst_pin" FLOAT;
+
+###RX and TX
+NET RX_pin LOC=G5;
+NET "RX_pin" FLOAT;
+NET TX_pin LOC=J2;
+NET "TX_pin" FLOAT;
+
+###KEYPAD
+NET keypad_0_S_pin<3> loc=F2;
+NET keypad_0_S_pin<3> iostandard=LVCMOS25;
+NET keypad_0_S_pin<2> loc=G4;
+NET keypad_0_S_pin<2> iostandard=LVCMOS25;
+NET keypad_0_S_pin<1> loc=G3;
+NET keypad_0_S_pin<1> iostandard=LVCMOS25;
+NET keypad_0_S_pin<0> loc=G1;
+NET keypad_0_S_pin<0> iostandard=LVCMOS25;
+
+NET keypad_0_R_pin<3> loc=J14;
+NET keypad_0_R_pin<3> iostandard=LVCMOS25;
+NET keypad_0_R_pin<2> loc=H14;
+NET keypad_0_R_pin<2> iostandard=LVCMOS25;
+NET keypad_0_R_pin<1> loc=M4;
+NET keypad_0_R_pin<1> iostandard=LVCMOS25;
+NET keypad_0_R_pin<0> loc=P1;
+NET keypad_0_R_pin<0> iostandard=LVCMOS25;
+
+#### LCD
+NET lcd_rs LOC=P12;
+NET lcd_rw LOC=J1; #Este no se usa en la placa nueva (sólo se escribe)
+NET lcd_e LOC=H1;
+NET lcd_data<0> LOC=H3;
+NET lcd_data<1> LOC=G2;
+NET lcd_data<2> LOC=K15;
+NET lcd_data<3> LOC=K16;
+NET lcd_data<4> LOC=F15;
+NET lcd_data<5> LOC=E2;
+NET lcd_data<6> LOC=E1;
+NET lcd_data<7> LOC=F3;
+
+#### LEDS RGB
+#NET leds_red LOC=P12;
+#NET leds_green LOC=H1;
+#NET leds_blue LOC=J1;
+
+NET leds_red LOC=E15;
+NET leds_green LOC=D16;
+NET leds_blue LOC=J16;
+
+#NET leds_red LOC=J14;
+#NET leds_green LOC=N15;
+#NET leds_blue LOC=G16;

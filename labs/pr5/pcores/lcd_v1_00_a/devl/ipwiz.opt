@@ -1,0 +1,11 @@
+-batch 
+-create lcd 
+-ver 1.00.a 
+-dir "U:\hlocal\git\SE\extraordinaria\proyecto" 
+-lang vhdl 
+-bus plbv46 s 
+-wfifo 1 512 
+-reg 1 
+-xps 
+-ise 
+-driver 

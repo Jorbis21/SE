@@ -1,0 +1,76 @@
+
+**** Build of configuration Debug for project proyecto ****
+
+make all 
+Building file: ../src/keypad.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../peripheral_tests_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.30.a -mno-xl-soft-mul -MMD -MP -MF"src/keypad.d" -MT"src/keypad.d" -o"src/keypad.o" "../src/keypad.c"
+../src/keypad.c: In function 'keypadDEMO':
+../src/keypad.c:79:2: warning: implicit declaration of function 'print' [-Wimplicit-function-declaration]
+../src/keypad.c:80:2: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+Finished building: ../src/keypad.c
+' '
+Building file: ../src/keypad_selftest.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../peripheral_tests_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.30.a -mno-xl-soft-mul -MMD -MP -MF"src/keypad_selftest.d" -MT"src/keypad_selftest.d" -o"src/keypad_selftest.o" "../src/keypad_selftest.c"
+../src/keypad_selftest.c: In function 'KEYPAD_SelfTest':
+../src/keypad_selftest.c:57:3: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+../src/keypad_selftest.c:45:11: warning: unused variable 'Reg16Value' [-Wunused-variable]
+../src/keypad_selftest.c:44:11: warning: unused variable 'Reg8Value' [-Wunused-variable]
+../src/keypad_selftest.c:42:11: warning: unused variable 'Index' [-Wunused-variable]
+Finished building: ../src/keypad_selftest.c
+' '
+Building file: ../src/lcd.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../peripheral_tests_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.30.a -mno-xl-soft-mul -MMD -MP -MF"src/lcd.d" -MT"src/lcd.d" -o"src/lcd.o" "../src/lcd.c"
+../src/lcd.c: In function 'lcdDEMO':
+../src/lcd.c:17:2: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+Finished building: ../src/lcd.c
+' '
+Building file: ../src/lcd_selftest.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../peripheral_tests_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.30.a -mno-xl-soft-mul -MMD -MP -MF"src/lcd_selftest.d" -MT"src/lcd_selftest.d" -o"src/lcd_selftest.o" "../src/lcd_selftest.c"
+../src/lcd_selftest.c: In function 'LCD_SelfTest':
+../src/lcd_selftest.c:57:3: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+../src/lcd_selftest.c:45:11: warning: unused variable 'Reg16Value' [-Wunused-variable]
+../src/lcd_selftest.c:44:11: warning: unused variable 'Reg8Value' [-Wunused-variable]
+Finished building: ../src/lcd_selftest.c
+' '
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../peripheral_tests_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.30.a -mno-xl-soft-mul -MMD -MP -MF"src/main.d" -MT"src/main.d" -o"src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:16:5: warning: implicit declaration of function 'print' [-Wimplicit-function-declaration]
+../src/main.c:21:5: warning: passing argument 1 of 'LCD_SelfTest' makes pointer from integer without a cast [enabled by default]
+../src/lcd.h:291:9: note: expected 'void *' but argument is of type 'unsigned int'
+Finished building: ../src/main.c
+' '
+Building file: ../src/xbram_example.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../peripheral_tests_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.30.a -mno-xl-soft-mul -MMD -MP -MF"src/xbram_example.d" -MT"src/xbram_example.d" -o"src/xbram_example.o" "../src/xbram_example.c"
+Finished building: ../src/xbram_example.c
+' '
+Building target: proyecto.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,--no-relax -Wl,-T -Wl,../src/lscript.ld -L../../peripheral_tests_bsp_0/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.30.a -mno-xl-soft-mul -o"proyecto.elf"  ./src/keypad.o ./src/keypad_selftest.o ./src/lcd.o ./src/lcd_selftest.o ./src/main.o ./src/xbram_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: proyecto.elf
+' '
+Invoking: MicroBlaze Print Size
+mb-size proyecto.elf  |tee "proyecto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12974	    368	   2176	  15518	   3c9e	proyecto.elf
+Finished building: proyecto.elf.size
+' '
+Invoking: Xilinx ELF Check
+elfcheck proyecto.elf -hw ../../proyecto_hw_platform/system.xml -pe microblaze_0  |tee "proyecto.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.1 Build EDK_P.15xf
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proyecto_hw_platform/system.xml -pe
+microblaze_0 proyecto.elf 
+
+ELF file	: proyecto.elf
+elfcheck passed.
+Finished building: proyecto.elf.elfcheck
+' '

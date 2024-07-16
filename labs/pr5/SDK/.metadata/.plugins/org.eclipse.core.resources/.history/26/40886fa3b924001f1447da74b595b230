@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include "xparameters.h"
+#include "xil_cache.h"
+#include "xbasic_types.h"
+#include "xbram.h"
+#include "bram_header.h"
+#include "keypad.h"
+
+
+int main()
+{
+
+
+   Xil_ICacheEnable();
+   Xil_DCacheEnable();
+
+   print("---Entering main---\n\r");
+
+   keypadDEMO();
+
+   print("---Exiting main---\n\r");
+
+   Xil_DCacheDisable();
+   Xil_ICacheDisable();
+
+   return 0;
+}
+

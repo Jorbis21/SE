@@ -1,0 +1,77 @@
+#define SILENCIO 	0x00000000
+#define DO 			0x00000BAA
+#define RE 			0x00000A64
+#define MI 			0x00000942
+#define FA 			0x000008BD
+#define SOL 		0x000007C9
+#define LA 			0x000006F0
+#define SI 			0x0000062E
+
+#define OCTAVA 	3
+
+
+#include <stdio.h>
+//#include "platform.h"
+#include "xparameters.h"
+#include "altavoz.h"
+
+void print(char *str);
+
+
+void my_delay(int delay){
+	int i, j;
+	for (i=0; i<delay; i=i+1)
+		for (j=0; j<500; j=j+1){}
+}
+
+void ALTAVOZ_suena(Xuint32 nota, Xuint32 octava){
+	ALTAVOZ_mWriteSlaveReg0 (XPAR_ALTAVOZ_0_BASEADDR, 0, nota << octava);
+}
+
+void ALTAVOZ_calla(){
+	ALTAVOZ_mWriteSlaveReg0 (XPAR_ALTAVOZ_0_BASEADDR, 0, SILENCIO);
+}
+
+/*int main()
+{
+    print("Practica altavoz\n\r");
+
+
+    ALTAVOZ_suena(DO, OCTAVA);
+    my_delay(300); print("DO\n\r");
+    ALTAVOZ_suena(RE, OCTAVA);
+    my_delay(300); print("RE\n\r");
+    ALTAVOZ_suena(MI, OCTAVA);
+    my_delay(300); print("MI\n\r");
+    ALTAVOZ_suena(FA, OCTAVA);
+    my_delay(300); print("FA\n\r");
+    ALTAVOZ_suena(SOL, OCTAVA);
+    my_delay(300); print("SL\n\r");
+    ALTAVOZ_suena(LA, OCTAVA);
+    my_delay(300); print("LA\n\r");
+    ALTAVOZ_suena(SI, OCTAVA);
+    my_delay(300); print("SI\n\r");
+    ALTAVOZ_suena(DO, (OCTAVA-1));
+    my_delay(300); print("DO\n\r");
+    ALTAVOZ_calla();
+    my_delay(300); print("--\n\r");
+    ALTAVOZ_suena(DO, (OCTAVA-1));
+    my_delay(300); print("DO\n\r");
+    ALTAVOZ_suena(SI, OCTAVA);
+    my_delay(300); print("SI\n\r");
+    ALTAVOZ_suena(LA, OCTAVA);
+    my_delay(300); print("LA\n\r");
+    ALTAVOZ_suena(SOL, OCTAVA);
+    my_delay(300); print("SL\n\r");
+    ALTAVOZ_suena(FA, OCTAVA);
+    my_delay(300); print("FA\n\r");
+    ALTAVOZ_suena(MI, OCTAVA);
+    my_delay(300); print("MI\n\r");
+    ALTAVOZ_suena(RE, OCTAVA);
+    my_delay(300); print("RE\n\r");
+    ALTAVOZ_suena(DO, OCTAVA);
+    my_delay(300); print("DO\n\r");
+    ALTAVOZ_calla();
+
+    return 0;
+}

@@ -1,0 +1,96 @@
+#NET leds<0> LOC=L5;
+#NET leds<1> LOC=N2;
+#NET leds<2> LOC=M3;
+#NET leds<3> LOC=N1;
+#NET leds<4> LOC=T13;
+#NET leds<5> LOC=L15;
+#NET leds<6> LOC=J13;
+#NET leds<7> LOC=H15;
+#NET "leds<0>" FLOAT;
+#NET "leds<1>" FLOAT;
+#NET "leds<2>" FLOAT;
+#NET "leds<3>" FLOAT;
+#NET "leds<4>" FLOAT;
+#NET "leds<5>" FLOAT;
+#NET "leds<6>" FLOAT;
+#NET "leds<7>" FLOAT;
+
+NET Clk LOC=P8;
+NET "Clk" FLOAT;
+	#switches placa superior
+NET reset LOC=K4;
+NET "reset" FLOAT;
+NET Sw<0> LOC=K3;
+NET Sw<1> LOC=K2;
+NET Sw<2> LOC=J4;
+NET "Sw<0>" FLOAT;
+NET "Sw<1>" FLOAT;
+NET "Sw<2>" FLOAT;
+
+NET Rx LOC=G5;
+NET "Rx" FLOAT;
+NET Tx LOC=J2;
+NET "Tx" FLOAT;
+
+#############################
+#BANNER
+net banner_0_col_serial_out_pin loc=P12;
+net banner_0_col_serial_out_pin iostandard = LVCMOS25 ;
+net banner_0_col_clk_pin loc =J1;
+net banner_0_col_clk_pin iostandard = LVCMOS25 ;
+net banner_0_row_serial_out_pin loc=H3;
+net banner_0_row_serial_out_pin iostandard = LVCMOS25 ;
+net banner_0_row_clk_pin loc =G2; 
+net banner_0_row_clk_pin iostandard = LVCMOS25 ;
+net banner_0_reset_out_pin loc = H1 ;
+net banner_0_reset_out_pin iostandard = LVCMOS25 ;
+NET banner_0_reset2_out_pin loc=K15;
+NET banner_0_reset2_out_pin iostandard=LVCMOS25;
+#KEYPAD
+net keypad_0_S_pin<3> loc=F2;
+net keypad_0_S_pin<3> iostandard=LVCMOS25;
+net keypad_0_S_pin<2> loc=G4;
+net keypad_0_S_pin<2> iostandard=LVCMOS25;
+net keypad_0_S_pin<1> loc=G3;
+net keypad_0_S_pin<1> iostandard=LVCMOS25;
+net keypad_0_S_pin<0> loc=G1;
+net keypad_0_S_pin<0> iostandard=LVCMOS25;
+net keypad_0_R_pin<3> loc=J14;
+net keypad_0_R_pin<3> iostandard=LVCMOS25;
+net keypad_0_R_pin<2> loc=H14;
+net keypad_0_R_pin<2> iostandard=LVCMOS25;
+net keypad_0_R_pin<1> loc=M4;
+net keypad_0_R_pin<1> iostandard=LVCMOS25;
+net keypad_0_R_pin<0> loc=P1;
+net keypad_0_R_pin<0> iostandard=LVCMOS25;
+
+
+####LEDS COLORES
+NET ledsrgb_0_red_pin LOC=P12;
+NET ledsrgb_0_green_pin LOC=H1;
+NET ledsrgb_0_blue_pin LOC=J1;
+NET ledsrgb_0_red_pin LOC=E15;
+NET ledsrgb_0_green_pin LOC=D16;
+NET ledsrgb_0_blue_pin LOC=J16;
+#NET USER2_RED_pin LOC=J14;
+#NET USER2_GREEN_pin LOC=N15;
+#NET USER2_BLUE_pin LOC=G16;
+
+####LEDS COLORES
+#NET RED_pin LOC=P12;
+#NET GREEN_pin LOC=H1;
+#NET BLUE_pin LOC=J1;
+#NET USER1_RED_pin LOC=E15;
+#NET USER1_GREEN_pin LOC=D16;
+#NET USER1_BLUE_pin LOC=J16;
+#NET USER2_RED_pin LOC=J14;
+#NET USER2_GREEN_pin LOC=N15;
+#NET USER2_BLUE_pin LOC=G16;
+#ALTAVOZ
+NET altavoz_0_sonido_pin LOC=M15;
+
+#Motor
+NET motor_hw_0_control_motor_pin<0> LOC=L15;
+NET motor_hw_0_control_motor_pin<1> LOC=L5;
+NET motor_hw_0_control_motor_pin<2> LOC=N2;
+NET motor_hw_0_control_motor_pin<3> LOC=M3;

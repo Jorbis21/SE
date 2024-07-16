@@ -1,0 +1,104 @@
+
+ PARAMETER VERSION = 2.1.0
+
+
+ PORT Rst_pin = plb_v46_0_SYS_Rst, DIR = I, SIGIS = RST
+ PORT control_motor = motor_0_control_motor, DIR = O, VEC = [0:3]
+ PORT keypad_0_R_pin = keypad_0_R, DIR = I, VEC = [3:0]
+ PORT keypad_0_S_pin = keypad_0_S, DIR = O, VEC = [3:0]
+ PORT buzzer = xps_gpio_0_GPIO_IO, DIR = IO
+ PORT lcd_rw = lcd_0_rw, DIR = O
+ PORT lcd_rs = lcd_0_rs, DIR = O
+ PORT lcd_e = lcd_0_e, DIR = O
+ PORT lcd_data = lcd_0_lcd_data, DIR = O, VEC = [7:0]
+ PORT LED_RED = leds_0_red, DIR = O
+ PORT LED_GREEN = leds_0_green, DIR = O
+ PORT LED_BLUE = leds_0_blue, DIR = O
+ PORT Clk_pin = plb_v46_0_PLB_Clk, DIR = I, SIGIS = CLK
+
+
+BEGIN microblaze
+ PARAMETER INSTANCE = microblaze_0
+ PARAMETER HW_VER = 8.30.a
+ BUS_INTERFACE DPLB = plb_v46_0
+ BUS_INTERFACE IPLB = plb_v46_0
+ PORT MB_RESET = plb_v46_0_SYS_Rst
+END
+
+BEGIN bram_block
+ PARAMETER INSTANCE = bram_block_0
+ PARAMETER HW_VER = 1.00.a
+ BUS_INTERFACE PORTA = xps_bram_if_cntlr_0_PORTA
+END
+
+BEGIN xps_bram_if_cntlr
+ PARAMETER INSTANCE = xps_bram_if_cntlr_0
+ PARAMETER HW_VER = 1.00.b
+ PARAMETER C_SPLB_NATIVE_DWIDTH = 32
+ PARAMETER C_BASEADDR = 0x00000000
+ PARAMETER C_HIGHADDR = 0x00007fff
+ BUS_INTERFACE SPLB = plb_v46_0
+ BUS_INTERFACE PORTA = xps_bram_if_cntlr_0_PORTA
+END
+
+BEGIN plb_v46
+ PARAMETER INSTANCE = plb_v46_0
+ PARAMETER HW_VER = 1.05.a
+ PORT PLB_Clk = plb_v46_0_PLB_Clk
+ PORT SYS_Rst = plb_v46_0_SYS_Rst
+END
+
+BEGIN motor
+ PARAMETER INSTANCE = motor_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0xcf200000
+ PARAMETER C_HIGHADDR = 0xcf20ffff
+ BUS_INTERFACE SPLB = plb_v46_0
+ PORT control_motor = motor_0_control_motor
+END
+
+BEGIN keypad
+ PARAMETER INSTANCE = keypad_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0xc9600000
+ PARAMETER C_HIGHADDR = 0xc960ffff
+ BUS_INTERFACE SPLB = plb_v46_0
+ PORT R = keypad_0_R
+ PORT S = keypad_0_S
+END
+
+BEGIN xps_gpio
+ PARAMETER INSTANCE = xps_gpio_0
+ PARAMETER HW_VER = 2.00.a
+ PARAMETER C_GPIO_WIDTH = 1
+ PARAMETER C_BASEADDR = 0x81400000
+ PARAMETER C_HIGHADDR = 0x8140ffff
+ BUS_INTERFACE SPLB = plb_v46_0
+ PORT GPIO_IO_O = xps_gpio_0_GPIO_IO_O
+ PORT GPIO_IO_T = xps_gpio_0_GPIO_IO_T
+ PORT GPIO_IO = xps_gpio_0_GPIO_IO
+END
+
+BEGIN lcd
+ PARAMETER INSTANCE = lcd_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0xcb400000
+ PARAMETER C_HIGHADDR = 0xcb40ffff
+ BUS_INTERFACE SPLB = plb_v46_0
+ PORT rw = lcd_0_rw
+ PORT rs = lcd_0_rs
+ PORT e = lcd_0_e
+ PORT lcd_data = lcd_0_lcd_data
+END
+
+BEGIN leds
+ PARAMETER INSTANCE = leds_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0xc7400000
+ PARAMETER C_HIGHADDR = 0xc740ffff
+ BUS_INTERFACE SPLB = plb_v46_0
+ PORT red = leds_0_red
+ PORT green = leds_0_green
+ PORT blue = leds_0_blue
+END
+

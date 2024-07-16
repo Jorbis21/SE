@@ -1,0 +1,59 @@
+
+**** Build of configuration Debug for project peripheral_tests_0 ****
+
+make all 
+Building file: ../src/my_plb_peripheral.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../peripheral_tests_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.30.a -mno-xl-soft-mul -MMD -MP -MF"src/my_plb_peripheral.d" -MT"src/my_plb_peripheral.d" -o"src/my_plb_peripheral.o" "../src/my_plb_peripheral.c"
+Finished building: ../src/my_plb_peripheral.c
+' '
+Building file: ../src/my_plb_peripheral_selftest.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../peripheral_tests_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.30.a -mno-xl-soft-mul -MMD -MP -MF"src/my_plb_peripheral_selftest.d" -MT"src/my_plb_peripheral_selftest.d" -o"src/my_plb_peripheral_selftest.o" "../src/my_plb_peripheral_selftest.c"
+../src/my_plb_peripheral_selftest.c: In function 'MY_PLB_PERIPHERAL_SelfTest':
+../src/my_plb_peripheral_selftest.c:57:3: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+../src/my_plb_peripheral_selftest.c:45:11: warning: unused variable 'Reg16Value' [-Wunused-variable]
+../src/my_plb_peripheral_selftest.c:44:11: warning: unused variable 'Reg8Value' [-Wunused-variable]
+../src/my_plb_peripheral_selftest.c:42:11: warning: unused variable 'Index' [-Wunused-variable]
+Finished building: ../src/my_plb_peripheral_selftest.c
+' '
+Building file: ../src/pr3.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../peripheral_tests_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.30.a -mno-xl-soft-mul -MMD -MP -MF"src/pr3.d" -MT"src/pr3.d" -o"src/pr3.o" "../src/pr3.c"
+../src/pr3.c: In function 'getNumber':
+../src/pr3.c:27:4: warning: implicit declaration of function 'XUartLite_RecvByte' [-Wimplicit-function-declaration]
+../src/pr3.c:29:4: warning: implicit declaration of function 'XUartLite_SendByte' [-Wimplicit-function-declaration]
+../src/pr3.c:64:3: warning: implicit declaration of function 'print' [-Wimplicit-function-declaration]
+../src/pr3.c: In function 'main':
+../src/pr3.c:81:2: warning: implicit declaration of function 'xil_printf' [-Wimplicit-function-declaration]
+Finished building: ../src/pr3.c
+' '
+Building file: ../src/xbram_example.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../peripheral_tests_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.30.a -mno-xl-soft-mul -MMD -MP -MF"src/xbram_example.d" -MT"src/xbram_example.d" -o"src/xbram_example.o" "../src/xbram_example.c"
+Finished building: ../src/xbram_example.c
+' '
+Building target: peripheral_tests_0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,--no-relax -Wl,-T -Wl,../src/lscript.ld -L../../peripheral_tests_bsp_0/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.30.a -mno-xl-soft-mul -o"peripheral_tests_0.elf"  ./src/my_plb_peripheral.o ./src/my_plb_peripheral_selftest.o ./src/pr3.o ./src/xbram_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: peripheral_tests_0.elf
+' '
+Invoking: MicroBlaze Print Size
+mb-size peripheral_tests_0.elf  |tee "peripheral_tests_0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11262	    368	   2176	  13806	   35ee	peripheral_tests_0.elf
+Finished building: peripheral_tests_0.elf.size
+' '
+Invoking: Xilinx ELF Check
+elfcheck peripheral_tests_0.elf -hw ../../pr3_hw_platform/system.xml -pe microblaze_0  |tee "peripheral_tests_0.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.1 Build EDK_P.15xf
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../pr3_hw_platform/system.xml -pe microblaze_0
+peripheral_tests_0.elf 
+
+ELF file	: peripheral_tests_0.elf
+elfcheck passed.
+Finished building: peripheral_tests_0.elf.elfcheck
+' '

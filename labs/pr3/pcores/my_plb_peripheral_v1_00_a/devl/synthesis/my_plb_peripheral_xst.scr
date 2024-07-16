@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "U:\hlocal\PABLO\SE\labs\pr3\pcores\my_plb_peripheral_v1_00_a\devl\synthesis\my_plb_peripheral_xst.prj"
+-top my_plb_peripheral
+-p virtex6
+-ofn "U:\hlocal\PABLO\SE\labs\pr3\pcores\my_plb_peripheral_v1_00_a\devl\synthesis\my_plb_peripheral_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib my_plb_peripheral_v1_00_a

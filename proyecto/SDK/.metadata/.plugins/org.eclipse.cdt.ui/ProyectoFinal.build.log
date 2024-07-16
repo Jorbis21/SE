@@ -1,0 +1,39 @@
+
+**** Build of configuration Debug for project ProyectoFinal ****
+
+make all 
+Building file: ../src/tragaperras.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -Wl,--no-relax -I../../peripheral_tests_bsp_0/microblaze_0/include -mxl-pattern-compare -mcpu=v8.30.a -mno-xl-soft-mul -MMD -MP -MF"src/tragaperras.d" -MT"src/tragaperras.d" -o"src/tragaperras.o" "../src/tragaperras.c"
+../src/tragaperras.c: In function 'main':
+../src/tragaperras.c:34:9: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/tragaperras.c:43:13: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/tragaperras.c:91:13: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/tragaperras.c: In function 'putValueOnLCD':
+../src/tragaperras.c:175:9: warning: assignment makes pointer from integer without a cast [enabled by default]
+Finished building: ../src/tragaperras.c
+' '
+Building target: ProyectoFinal.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,--no-relax -Wl,-T -Wl,../src/lscript.ld -L../../peripheral_tests_bsp_0/microblaze_0/lib -mxl-pattern-compare -mcpu=v8.30.a -mno-xl-soft-mul -o"ProyectoFinal.elf"  ./src/buzzer.o ./src/keypad.o ./src/lcd.o ./src/leds.o ./src/motor.o ./src/tragaperras.o ./src/xbram_example.o ./src/xgpio_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: ProyectoFinal.elf
+' '
+Invoking: MicroBlaze Print Size
+mb-size ProyectoFinal.elf  |tee "ProyectoFinal.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11062	    388	   2208	  13658	   355a	ProyectoFinal.elf
+Finished building: ProyectoFinal.elf.size
+' '
+Invoking: Xilinx ELF Check
+elfcheck ProyectoFinal.elf -hw ../../proyecto_hw_platform/system.xml -pe microblaze_0  |tee "ProyectoFinal.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.1 Build EDK_P.15xf
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../proyecto_hw_platform/system.xml -pe
+microblaze_0 ProyectoFinal.elf 
+
+ELF file	: ProyectoFinal.elf
+elfcheck passed.
+Finished building: ProyectoFinal.elf.elfcheck
+' '

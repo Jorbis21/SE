@@ -1,0 +1,41 @@
+/*****************************************************************************
+* Filename:          U:\hlocal\pablo\extraordinaria\proyecto/drivers/keypad_v1_00_a/src/keypad.c
+* Version:           1.00.a
+* Description:       keypad Driver Source File
+* Date:              Fri Jun 07 12:18:11 2024 (by Create and Import Peripheral Wizard)
+*****************************************************************************/
+
+
+/***************************** Include Files *******************************/
+
+#include "keypad.h"
+#include "xparameters.h"
+
+/************************** Function Definitions ***************************/
+
+Xuint32 transformKey(Xuint32 pressed){
+	return pressed >> 28;
+}
+
+void keypadDEMO(){
+	Xuint32 Reg32Value, TeclaOld, value;
+
+	print("---Test para el keypad---\n\r");
+	xil_printf(" Pulse una tecla cualquiera \n\r");
+
+	Reg32Value = KEYPAD_mReadReg(BASE_ADDRESS_KEYPAD, 0);
+	value = transformKey(Reg32Value);
+
+	xil_printf("   Se ha leido %d\n\r", Reg32Value);
+	TeclaOld = Reg32Value;
+
+	while(1){
+		Reg32Value = KEYPAD_mReadReg(BASE_ADDRESS_KEYPAD, 0);
+		if(Reg32Value != TeclaOld){
+			value = transformKey(Reg32Value);
+			xil_printf("   Se ha leido %d\n\r", Reg32Value);
+			TeclaOld = Reg32Value;
+			//KEYPAD_mWriteReg(BASE_ADDRESS_KEYPAD, 0,0); /* Se escribe un 0 en el registro del teclado para borrar la última tecla leída */
+		}
+	}
+}

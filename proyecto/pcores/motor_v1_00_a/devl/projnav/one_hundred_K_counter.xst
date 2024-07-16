@@ -1,0 +1,5 @@
+set -tmpdir "U:/hlocal/pablo/SE/proyecto/pcores/motor_v1_00_a/devl/projnav/xst/projnav.tmp"
+set -xsthdpdir "U:/hlocal/pablo/SE/proyecto/pcores/motor_v1_00_a/devl/projnav/xst"
+elaborate
+-ifn one_hundred_K_counter.prj
+-ifmt mixed

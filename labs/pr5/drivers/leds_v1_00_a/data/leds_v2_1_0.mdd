@@ -1,0 +1,15 @@
+##############################################################################
+## Filename:          U:\hlocal\git\SE\extraordinaria\proyecto/drivers/leds_v1_00_a/data/leds_v2_1_0.mdd
+## Description:       Microprocessor Driver Definition
+## Date:              Mon Jun 10 16:38:40 2024 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+OPTION psf_version = 2.1.0;
+
+BEGIN DRIVER leds
+
+  OPTION supported_peripherals = (leds);
+  OPTION depends = (common_v1_00_a);
+  OPTION copyfiles = all;
+
+END DRIVER

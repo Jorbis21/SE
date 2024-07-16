@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include "xparameters.h"
+#include "xil_cache.h"
+#include "xbasic_types.h"
+#include "xbram.h"
+#include "bram_header.h"
+#include "keypad.h"
+
+#define BASE_ADDRESS_KEYPAD 0xC9600000
+
+void keypadDEMO(){
+	print("---Test para el keypad---\n\r");
+	baseaddr = BASE_ADDRESS_KEYPAD;
+	xil_printf(" Pulse una tecla cualquiera \n\r");
+	Reg32Value = KEYPAD_mReadReg(baseaddr, 0);
+	xil_printf("   Se ha leido %d del registro 0 del teclado \n\r", Reg32Value);
+	KEYPAD_mWriteReg(baseaddr, 0,0);
+	TeclaOld=Reg32Value;
+	while (1){
+		if (Reg32Value != TeclaOld){
+			xil_printf("    Se ha leido %d del registro 0 del teclado \n\r", Reg32Value);
+			TeclaOld=Reg32Value;
+			Reg32Value =KEYPAD_mReadReg (baseaddr, 0);
+			KEYPAD_mWriteReg(baseaddr, 0,0); /* Se escribe un 0 en el registro del teclado para borrar la última tecla leída */
+		}
+	}
+}
+
+int main(){
+   Xil_ICacheEnable();
+   Xil_DCacheEnable();
+
+   print("---Entering main---\n\r");
+
+   keypadDEMO();
+
+   print("---Exiting main---\n\r");
+
+   Xil_DCacheDisable();
+   Xil_ICacheDisable();
+
+   return 0;
+}
+

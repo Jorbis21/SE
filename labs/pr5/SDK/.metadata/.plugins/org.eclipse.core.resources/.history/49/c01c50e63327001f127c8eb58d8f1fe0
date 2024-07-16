@@ -1,0 +1,127 @@
+#include <stdio.h>
+#include "xparameters.h"
+#include "xil_cache.h"
+#include "xbasic_types.h"
+#include "xbram.h"
+#include "bram_header.h"
+#include "keypad.h"
+#include "lcd.h"
+
+void practica5();
+void escribeLineaLCD(char line);
+
+int main() {
+	   Xil_ICacheEnable();
+
+	   Xil_DCacheEnable();
+
+	   practica5();
+	   //keypadDEMO();
+
+	   Xil_DCacheDisable();
+
+	   Xil_ICacheDisable();
+
+	   return 0;
+}
+
+void practica5(){
+	//EN ESTA PRACTICA VAMOS A USAR EL LCD Y EL KEYPAD
+	//EL RESULTADO SERÍA SIMULAR EN EL LCD LOS CARTELES QUE UTILIZAN LOS AUTBOUSES PARA INDICAR QUE LINEA SON
+	//PARA ELLO EL USUARIO PODRÁ CAMBIAR EL VALOR EN EL LCD PULSANDO UNA DE LAS TECLAS DEL KEYPAD, DONDE CADA UNO DE ESOS VALORES CORRESPONDE A UNA LINEAS (LÍNEAS 0-9 Y A-F)
+	//SE MOSTRARÁ ENTONCES LA LÍNEA Y DE DONDE A DONDE VA
+	Xuint32 pressedKey, keypadValue;
+	char lastLine, line;
+
+	LCD_inicializa();
+
+	while(1){
+		pressedKey = KEYPAD_mReadReg(XPAR_KEYPAD_0_BASEADDR, 0);
+		keypadValue = transformKey(pressedKey);
+		line = keyToChar(keypadValue);
+
+		if(line != lastLine){//si se indica la misma linea, cambiamos la direccion
+			escribeLineaLCD(line);
+			lastLine = newLine;
+		}
+	}
+}
+void escribeLineaLCD(char line){
+	char* arrival = "";
+
+	switch(line){
+		case '0':
+			arrival = "CiU:BCN";
+			break;
+		case '1':
+			arrival = "Pio:Cuzco";
+			break;
+		case '2':
+			arrival = "BCN:Cuenca";
+			break;
+		case '3':
+			arrival = "Sol:Cibeles";
+			break;
+		case '4':
+			arrival = "CiU:Sol";
+			break;
+		case '5':
+			arrival = "Sol:BCN";
+			break;
+		case '6':
+			arrival = "Gran Via:CiU";
+			break;
+		case '7':
+			arrival = "Madrid:Cielo";
+			break;
+		case '8':
+			arrival = "Murcia:CiU";
+			break;
+		case '9':
+			arrival = "Kansas:Mucho";
+			break;
+		case 'A':
+			arrival = "Kenia:Cuzco";
+			break;
+		case 'B':
+			arrival = "Moncloa:BCN";
+			break;
+		case 'C':
+			arrival = "Kenia:BCN";
+			break;
+		case 'D':
+			arrival = "Murcia:BCN";
+			break;
+		case 'E':
+			arrival = "Marte:BCN";
+			break;
+		case 'F':
+			arrival = "CiU:Mi Casa";
+			break;
+		default: break;
+	}
+
+	arrival += '0';
+
+	LCD_enviarCMD(CLEAR_DISPLAY_CMD);
+	LCD_enviarCMD(RETURN_HOME_CMD);
+	LCD_enviarCMD(WRITE_CMD);
+
+	LCD_enviarCMD(WRITE_CMD + 'L');
+	LCD_enviarCMD(WRITE_CMD + 'i');
+	LCD_enviarCMD(WRITE_CMD + 'n');
+	LCD_enviarCMD(WRITE_CMD + 'e');
+	LCD_enviarCMD(WRITE_CMD + 'a');
+	LCD_enviarCMD(WRITE_CMD + ' ');
+	LCD_enviarCMD(WRITE_CMD + line);
+
+	LCD_enviarCMD(SECOND_ROW);
+
+	int i = 0;
+	char letra;
+	while(arrival[i]!='\0'){
+		letra = arrival[i];
+		LCD_enviarCMD(WRITE_CMD + letra);
+		i++;
+	}
+}

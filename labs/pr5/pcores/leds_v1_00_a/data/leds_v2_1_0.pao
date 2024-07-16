@@ -1,0 +1,10 @@
+##############################################################################
+## Filename:          C:/Users/CJRipa/Desktop/SE-main/proyecto/pcores/leds_v1_00_a/data/leds_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Sun Jan 28 21:01:52 2024 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a  all 
+lib plbv46_slave_single_v1_01_a  all 
+lib leds_v1_00_a user_logic vhdl
+lib leds_v1_00_a leds vhdl

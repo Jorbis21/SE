@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include "xparameters.h"
+#include "xil_cache.h"
+#include "xbasic_types.h"
+#include "xbram.h"
+#include "bram_header.h"
+#include "keypad.h"
+
+
+int main()
+{
+
+
+   Xil_ICacheEnable();
+   Xil_DCacheEnable();
+
+   print("---Entering main---\n\r");
+
+
+
+   {
+      int status;
+
+      print("\r\nRunning Bram Example() for xps_bram_if_cntlr_0...\r\n");
+
+      status = BramExample(XPAR_XPS_BRAM_IF_CNTLR_0_DEVICE_ID);
+
+      if (status == 0) {
+         xil_printf("Bram Example PASSED.\r\n");
+      }
+      else {
+         print("Bram Example FAILED.\r\n");
+      }
+   }
+
+
+   /*
+    * Peripheral SelfTest will not be run for xps_uartlite_0
+    * because it has been selected as the STDOUT device
+    */
+
+
+   print("---Exiting main---\n\r");
+
+   Xil_DCacheDisable();
+   Xil_ICacheDisable();
+
+   return 0;
+}
+

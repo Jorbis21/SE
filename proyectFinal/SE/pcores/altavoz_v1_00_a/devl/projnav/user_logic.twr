@@ -1,0 +1,187 @@
+--------------------------------------------------------------------------------
+Release 14.1 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\xilinEmpotrado\14.1\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v
+3 -s 5 -n 3 -fastpaths -xml user_logic.twx user_logic.ncd -o user_logic.twr
+user_logic.pcf
+
+Design file:              user_logic.ncd
+Physical constraint file: user_logic.pcf
+Device,package,speed:     xc3s1000,ft256,-5 (PRODUCTION 1.39 2012-04-23)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock Bus2IP_Clk
+---------------+------------+------------+------------------+--------+
+               |Max Setup to|Max Hold to |                  | Clock  |
+Source         | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+---------------+------------+------------+------------------+--------+
+Bus2IP_BE<0>   |    4.426(R)|   -2.050(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_BE<1>   |    4.132(R)|   -1.777(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_BE<2>   |    2.365(R)|   -0.812(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_BE<3>   |    2.848(R)|   -1.210(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<0> |    1.085(R)|    0.119(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<1> |    0.407(R)|    0.661(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<2> |    0.759(R)|    0.380(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<3> |    0.403(R)|    0.665(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<4> |    0.502(R)|    0.585(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<5> |    0.451(R)|    0.626(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<6> |    0.726(R)|    0.408(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<7> |    0.675(R)|    0.449(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<8> |    0.723(R)|    0.410(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<9> |    0.672(R)|    0.451(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<10>|    1.009(R)|    0.189(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<11>|    0.420(R)|    0.660(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<12>|    0.503(R)|    0.593(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<13>|    0.403(R)|    0.673(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<14>|    0.427(R)|    0.654(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<15>|    0.677(R)|    0.454(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<16>|    0.728(R)|    0.405(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<17>|    0.725(R)|    0.407(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<18>|    0.455(R)|    0.623(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<19>|    0.557(R)|    0.542(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<20>|    0.719(R)|    0.428(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<21>|    0.671(R)|    0.466(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<22>|    0.760(R)|    0.379(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<23>|    0.712(R)|    0.418(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<24>|    0.718(R)|    0.431(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<25>|    1.378(R)|   -0.096(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<26>|    1.204(R)|    0.032(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<27>|    1.405(R)|   -0.128(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<28>|    1.672(R)|   -0.335(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<29>|    1.895(R)|   -0.513(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<30>|    1.718(R)|   -0.379(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<31>|    0.831(R)|    0.331(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Reset   |    3.875(R)|   -0.285(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_WrCE<0> |    4.926(R)|   -0.559(R)|Bus2IP_Clk_BUFGP  |   0.000|
+---------------+------------+------------+------------------+--------+
+
+Clock Bus2IP_Clk to Pad
+---------------+------------+------------------+--------+
+               | clk (edge) |                  | Clock  |
+Destination    |   to PAD   |Internal Clock(s) | Phase  |
+---------------+------------+------------------+--------+
+IP2Bus_Data<0> |   11.053(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<1> |   11.878(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<2> |   11.315(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<3> |   11.804(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<4> |   11.084(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<5> |   11.749(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<6> |   10.293(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<7> |   11.378(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<8> |   10.388(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<9> |   10.941(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<10>|   10.239(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<11>|   10.500(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<12>|   10.787(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<13>|   10.873(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<14>|   10.310(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<15>|   10.080(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<16>|   10.710(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<17>|   10.114(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<18>|   10.395(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<19>|   11.059(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<20>|   11.058(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<21>|   11.051(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<22>|   10.654(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<23>|   11.110(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<24>|   10.757(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<25>|   10.726(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<26>|   10.647(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<27>|    9.834(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<28>|    9.667(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<29>|    9.940(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<30>|   10.638(R)|Bus2IP_Clk_BUFGP  |   0.000|
+IP2Bus_Data<31>|   10.077(R)|Bus2IP_Clk_BUFGP  |   0.000|
+sonido         |    8.594(R)|Bus2IP_Clk_BUFGP  |   0.000|
+---------------+------------+------------------+--------+
+
+Clock to Setup on destination clock Bus2IP_Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Bus2IP_Clk     |    6.329|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+Bus2IP_RdCE<0> |IP2Bus_Data<0> |   11.306|
+Bus2IP_RdCE<0> |IP2Bus_Data<1> |   11.849|
+Bus2IP_RdCE<0> |IP2Bus_Data<2> |   11.333|
+Bus2IP_RdCE<0> |IP2Bus_Data<3> |   11.707|
+Bus2IP_RdCE<0> |IP2Bus_Data<4> |   12.277|
+Bus2IP_RdCE<0> |IP2Bus_Data<5> |   11.355|
+Bus2IP_RdCE<0> |IP2Bus_Data<6> |   11.217|
+Bus2IP_RdCE<0> |IP2Bus_Data<7> |   11.891|
+Bus2IP_RdCE<0> |IP2Bus_Data<8> |   10.678|
+Bus2IP_RdCE<0> |IP2Bus_Data<9> |   10.718|
+Bus2IP_RdCE<0> |IP2Bus_Data<10>|   11.206|
+Bus2IP_RdCE<0> |IP2Bus_Data<11>|   11.154|
+Bus2IP_RdCE<0> |IP2Bus_Data<12>|   10.374|
+Bus2IP_RdCE<0> |IP2Bus_Data<13>|   11.373|
+Bus2IP_RdCE<0> |IP2Bus_Data<14>|   10.616|
+Bus2IP_RdCE<0> |IP2Bus_Data<15>|   10.209|
+Bus2IP_RdCE<0> |IP2Bus_Data<16>|   10.964|
+Bus2IP_RdCE<0> |IP2Bus_Data<17>|   10.298|
+Bus2IP_RdCE<0> |IP2Bus_Data<18>|   10.150|
+Bus2IP_RdCE<0> |IP2Bus_Data<19>|   11.762|
+Bus2IP_RdCE<0> |IP2Bus_Data<20>|   11.390|
+Bus2IP_RdCE<0> |IP2Bus_Data<21>|   11.024|
+Bus2IP_RdCE<0> |IP2Bus_Data<22>|   10.912|
+Bus2IP_RdCE<0> |IP2Bus_Data<23>|   10.658|
+Bus2IP_RdCE<0> |IP2Bus_Data<24>|   10.636|
+Bus2IP_RdCE<0> |IP2Bus_Data<25>|    9.422|
+Bus2IP_RdCE<0> |IP2Bus_Data<26>|   10.519|
+Bus2IP_RdCE<0> |IP2Bus_Data<27>|    9.886|
+Bus2IP_RdCE<0> |IP2Bus_Data<28>|    9.609|
+Bus2IP_RdCE<0> |IP2Bus_Data<29>|    9.648|
+Bus2IP_RdCE<0> |IP2Bus_Data<30>|   10.018|
+Bus2IP_RdCE<0> |IP2Bus_Data<31>|    8.898|
+Bus2IP_RdCE<0> |IP2Bus_RdAck   |    5.472|
+Bus2IP_WrCE<0> |IP2Bus_WrAck   |    5.436|
+---------------+---------------+---------+
+
+
+Analysis completed Sat Dec 16 12:47:25 2023 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4495 MB
+
+
+

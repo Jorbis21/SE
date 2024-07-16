@@ -1,0 +1,9 @@
+V3 3
+FL U:/hlocal/pablo/SE/proyecto/pcores/motor_v1_00_a/hdl/vhdl/100_k_counter.vhd 2024/01/23.12:46:03 P.15xf
+EN work/one_hundred_K_counter 1706011456 \
+      FL U:/hlocal/pablo/SE/proyecto/pcores/motor_v1_00_a/hdl/vhdl/100_k_counter.vhd \
+      PB ieee/std_logic_1164 1335251622 PB ieee/std_logic_arith 1335251623 \
+      PB ieee/STD_LOGIC_UNSIGNED 1335251625
+AR work/one_hundred_K_counter/Behavioral 1706011457 \
+      FL U:/hlocal/pablo/SE/proyecto/pcores/motor_v1_00_a/hdl/vhdl/100_k_counter.vhd \
+      EN work/one_hundred_K_counter 1706011456

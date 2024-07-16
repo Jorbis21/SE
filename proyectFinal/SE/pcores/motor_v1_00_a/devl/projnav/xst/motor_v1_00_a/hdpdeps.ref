@@ -1,0 +1,24 @@
+V3 11
+FL C:/Users/marti/OneDrive/Documentos/4/proyectFinal/SE/pcores/motor_v1_00_a/hdl/vhdl/motor.vhd 2023/12/16.18:02:15 P.15xf
+EN motor_v1_00_a/motor 1706006634 \
+      FL C:/Users/marti/OneDrive/Documentos/4/proyectFinal/SE/pcores/motor_v1_00_a/hdl/vhdl/motor.vhd \
+      PB ieee/std_logic_1164 1335251622 PB ieee/std_logic_arith 1335251623 \
+      PB ieee/STD_LOGIC_UNSIGNED 1335251625 LB proc_common_v3_00_a \
+      PB proc_common_v3_00_a/proc_common_pkg 1706006613 \
+      LB plbv46_slave_single_v1_01_a LB motor_v1_00_a EN motor_v1_00_a/user_logic 1706006632 \
+      PB proc_common_v3_00_a/ipif_pkg 1706006625 \
+      EN plbv46_slave_single_v1_01_a/plbv46_slave_single 1706006630
+AR motor_v1_00_a/motor/IMP 1706006635 \
+      FL C:/Users/marti/OneDrive/Documentos/4/proyectFinal/SE/pcores/motor_v1_00_a/hdl/vhdl/motor.vhd \
+      EN motor_v1_00_a/motor 1706006634 \
+      CP plbv46_slave_single_v1_01_a/plbv46_slave_single \
+      CP motor_v1_00_a/user_logic
+FL C:/Users/marti/OneDrive/Documentos/4/proyectFinal/SE/pcores/motor_v1_00_a/hdl/vhdl/user_logic.vhd 2023/12/16.18:02:15 P.15xf
+EN motor_v1_00_a/user_logic 1706006632 \
+      FL C:/Users/marti/OneDrive/Documentos/4/proyectFinal/SE/pcores/motor_v1_00_a/hdl/vhdl/user_logic.vhd \
+      PB ieee/std_logic_1164 1335251622 PB ieee/std_logic_arith 1335251623 \
+      PB ieee/STD_LOGIC_UNSIGNED 1335251625 LB proc_common_v3_00_a \
+      PB proc_common_v3_00_a/proc_common_pkg 1706006613
+AR motor_v1_00_a/user_logic/IMP 1706006633 \
+      FL C:/Users/marti/OneDrive/Documentos/4/proyectFinal/SE/pcores/motor_v1_00_a/hdl/vhdl/user_logic.vhd \
+      EN motor_v1_00_a/user_logic 1706006632

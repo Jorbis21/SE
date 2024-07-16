@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include "xparameters.h"
+#include "xil_cache.h"
+#include "xbasic_types.h"
+#include "xbram.h"
+#include "bram_header.h"
+#include "keypad.h"
+#include "lcd.h"
+
+int main() {
+	   Xil_ICacheEnable();
+	   Xil_DCacheEnable();
+
+	   print("---Entering main---\n\r");
+
+	   //lcdDEMO();
+	   LCD_SelfTest(XPAR_LCD_0_BASEADDR);
+
+	   print("---Exiting main---\n\r");
+
+	   Xil_DCacheDisable();
+	   Xil_ICacheDisable();
+
+	   return 0;
+}

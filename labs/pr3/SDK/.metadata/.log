@@ -1,0 +1,54 @@
+!SESSION 2023-12-20 15:02:01.486 -----------------------------------------------
+eclipse.buildId=Release 14.1 Build SDK_P.15xf
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-12-20 15:06:23.820
+!MESSAGE Indexed 'peripheral_tests_0' (2 sources, 25 headers) in 0,63 sec: 991 declarations; 1.095 references; 12 unresolved inclusions; 0 syntax errors; 29 unresolved names (1,37%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-12-20 15:06:23.845
+!MESSAGE Indexed 'peripheral_tests_bsp_0' (0 sources, 8 headers) in 0,01 sec: 0 declarations; 0 references; 8 unresolved inclusions; 0 syntax errors; 0 unresolved names (0,00%)
+!SESSION 2023-12-20 15:25:13.150 -----------------------------------------------
+eclipse.buildId=Release 14.1 Build SDK_P.15xf
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-12-20 15:26:51.554
+!MESSAGE Indexed 'peripheral_tests_0' (2 sources, 35 headers) in 0,38 sec: 1.154 declarations; 1.224 references; 3 unresolved inclusions; 0 syntax errors; 1 unresolved names (0,04%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-12-20 15:26:51.938
+!MESSAGE Indexed 'peripheral_tests_bsp_0' (37 sources, 37 headers) in 0,37 sec: 886 declarations; 4.302 references; 23 unresolved inclusions; 0 syntax errors; 49 unresolved names (0,94%)
+
+!ENTRY org.eclipse.cdt.ui 4 0 2023-12-20 15:29:00.395
+!MESSAGE Error in CDT UI during reconcile
+!STACK 1
+C Model Exception: C Model Status [Element pr3.c does not exist.]
+	at org.eclipse.cdt.internal.core.model.CElement.newNotPresentException(Unknown Source)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(Unknown Source)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(Unknown Source)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(Unknown Source)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(Unknown Source)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(Unknown Source)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(Unknown Source)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(Unknown Source)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(Unknown Source)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(Unknown Source)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(Unknown Source)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(Unknown Source)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+!SUBENTRY 1 org.eclipse.cdt.core 4 969 2023-12-20 15:29:00.395
+!MESSAGE Element pr3.c does not exist.
+!SESSION 2024-01-25 11:28:13.565 -----------------------------------------------
+eclipse.buildId=Release 14.1 Build SDK_P.15xf
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_ES
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-01-25 11:28:28.331
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

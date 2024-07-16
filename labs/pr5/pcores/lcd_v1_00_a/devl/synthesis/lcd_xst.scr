@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "U:\hlocal\git\SE\extraordinaria\proyecto\pcores\lcd_v1_00_a\devl\synthesis\lcd_xst.prj"
+-top lcd
+-p virtex6
+-ofn "U:\hlocal\git\SE\extraordinaria\proyecto\pcores\lcd_v1_00_a\devl\synthesis\lcd_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib lcd_v1_00_a
